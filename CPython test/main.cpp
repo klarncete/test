@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string>
 
-//Gets user input for a string, and returns the string transformed into a const char array pointer
-
 int main(){
 	PyObject *pModule, *pName, *pFunc, *pX, *pY, *pResult, *pArgs;
 	/*std::string sName, sModule;
@@ -36,8 +34,6 @@ int main(){
 			pY = PyInt_FromLong(y);
 			PyTuple_SetItem(pArgs, 0, pX);
 			PyTuple_SetItem(pArgs, 1, pY);
-			if (!PyTuple_Check(pArgs))
-				std::cout<<"ERROR WITH THE TUPLE";
 			if (pX != NULL && pY != NULL){
 				std::cout<<"Result should be: "<<PyInt_AsLong(PyTuple_GetItem(pArgs,0))*
 					PyInt_AsLong(PyTuple_GetItem(pArgs,1))<<std::endl;
